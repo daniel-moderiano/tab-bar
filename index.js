@@ -1,15 +1,12 @@
-let navList = document.querySelector(".nav-list");
-const navLinks = document.querySelectorAll(".nav-link");
+const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content]');
 
-function removeSelectedClass() {
-  navLinks.forEach((link) => {
-    link.classList.remove("nav-link--selected");
-  });
-}
-
-navList.addEventListener("click", (e) => {
-  if (e.target.classList.contains("nav-link")) {
-    removeSelectedClass();
-    e.target.classList.toggle("nav-link--selected");
-  }
-});
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget);
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('active');
+    })
+    target.classList.add('active');
+  })
+})

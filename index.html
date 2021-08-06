@@ -6,18 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
-  <title>Mobile menu</title>
+  <title>Tabs</title>
 </head>
 <body>
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Link 4</a></li>
-    </ul>
-  </nav>
-  <main class="main"></main>
+  <ul>
+    <li data-tab-target="#home">Home</li>
+    <li data-tab-target="#pricing">Pricing</li>
+    <li data-tab-target="#about">About</li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" data-tab-content class="active">
+      <h1>Home</h1>
+      <p>This is the home</p>
+    </div>
+    <div id="pricing" data-tab-content>
+      <h1>Pricing</h1>
+      <p>Some info about pricing</p>
+    </div>
+    <div id="about" data-tab-content>
+      <h1>About</h1>
+      <p>Let me tell you about me</p>
+    </div>
+  </div>
   <script src="index.js"></script>
 </body>
 </html>
