@@ -15,3 +15,27 @@ body {
 .active[data-tab-content] {
   display: block;
 }
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background-color: #CCC;
+}
+
+.tab:hover {
+  background-color: #AAA;
+}
+
+.tab-content {
+  margin: 0 1rem;
+}
+

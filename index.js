@@ -6,7 +6,11 @@ tabs.forEach(tab => {
     const target = document.querySelector(tab.dataset.tabTarget);
     tabContents.forEach(tabContent => {
       tabContent.classList.remove('active');
-    })
+    });
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
     target.classList.add('active');
+    tab.classList.add('active');
   })
 })
